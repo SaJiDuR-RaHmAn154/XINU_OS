@@ -1,37 +1,44 @@
-#include<xinu.h>
+#include <xinu.h>
 
-void proc1(){
+void proc1()
+{
     printf("Process 1 : %d\n", getpid());
-    while (1){
+    while (1)
+    {
     }
-
 }
 
-void proc2(){
+void proc2()
+{
     printf("Process 2 : %d\n", getpid());
-    while (1){
+    while (1)
+    {
     }
 }
 
-void Printer(){
+void Printer()
+{
     struct sentry curr;
 
-    for(int i = 0; i < NSEM; i++){
+    for (int i = 0; i < NSEM; i++)
+    {
         curr = semtab[i];
-        if(curr.sstate == S_USED){
-            printf("semid = %d, count = %d\n", i, curr.scount);
+        if (curr.sstate == S_USED)
+        {
+            printf("Semid = %d, count = %d\n", i, curr.scount);
         }
     }
 }
 
-int hello1(){
+int hello1()
+{
 
     sid32 sem1 = semcreate(0);
     sid32 sem2 = semcreate(1);
     sid32 sem3 = semcreate(2);
     sid32 sem4 = semcreate(3);
 
-    printf("ids - %d, %d, %d, %d\n", sem1, sem2, sem3, sem4);
+    printf("Newly created semaphore ids - %d, %d, %d, %d\n", sem1, sem2, sem3, sem4);
 
     resume(create(proc1, 1024, 20, "proc1", 0));
     resume(create(proc2, 1024, 20, "proc2", 0));
@@ -40,8 +47,8 @@ int hello1(){
     semreset(sem3, 0);
     semreset(sem4, 0);
 
-    printf("After deleting sem3 and sem4");
+    printf("After reseting sem3 and sem4\n");
     resume(create(Printer, 1024, 20, "Printer", 0));
 
-return 0;
+    return 0;
 }

@@ -642,8 +642,8 @@ Linker script and memory map
  .rodata        0x001189c8       0x61 binaries/getutime.o
  *fill*         0x00118a29        0x3 
  .rodata        0x00118a2c       0x90 binaries/i386.o
- .rodata        0x00118abc      0x131 binaries/initialize.o
- *fill*         0x00118bed        0x3 
+ .rodata        0x00118abc      0x132 binaries/initialize.o
+ *fill*         0x00118bee        0x2 
  .rodata        0x00118bf0       0x20 binaries/kill.o
  .rodata        0x00118c10       0x2e binaries/main.o
  .rodata        0x00118c3e        0xf binaries/panic.o
@@ -722,47 +722,47 @@ Linker script and memory map
  .rodata        0x00119cd4      0x26f binaries/pdump.o
  *fill*         0x00119f43        0x1 
  .rodata        0x00119f44      0x154 binaries/tftp.o
- .rodata        0x0011a098       0x7f binaries/hello1.o
- *fill*         0x0011a117        0x9 
- .rodata        0x0011a120      0x397 binaries/shell.o
-                0x0011a1c0                cmdtab
- .rodata        0x0011a4b7       0x28 binaries/xsh_argecho.o
- *fill*         0x0011a4df        0x1 
- .rodata        0x0011a4e0      0x123 binaries/xsh_arp.o
- *fill*         0x0011a603        0x1 
- .rodata        0x0011a604       0xc9 binaries/xsh_cat.o
- .rodata        0x0011a6cd       0x19 binaries/xsh_clear.o
- *fill*         0x0011a6e6        0x2 
- .rodata        0x0011a6e8      0x1c3 binaries/xsh_date.o
- .rodata        0x0011a8ab       0x5d binaries/xsh_devdump.o
- .rodata        0x0011a908        0x9 binaries/xsh_echo.o
- *fill*         0x0011a911        0x3 
- .rodata        0x0011a914      0x169 binaries/xsh_help.o
- *fill*         0x0011aa7d        0x3 
- .rodata        0x0011aa80      0x12e binaries/xsh_kill.o
- *fill*         0x0011abae        0x2 
- .rodata        0x0011abb0      0x190 binaries/xsh_ls.o
- .rodata        0x0011ad40      0x266 binaries/xsh_memdump.o
- *fill*         0x0011afa6        0x2 
- .rodata        0x0011afa8      0x225 binaries/xsh_memstat.o
- *fill*         0x0011b1cd        0x3 
- .rodata        0x0011b1d0      0x1b0 binaries/xsh_netinfo.o
- .rodata        0x0011b380      0x340 binaries/xsh_ns.o
- .rodata        0x0011b6c0      0x19d binaries/xsh_ping.o
- *fill*         0x0011b85d        0x3 
- .rodata        0x0011b860      0x1e0 binaries/xsh_ps.o
- .rodata        0x0011ba40       0xeb binaries/xsh_sleep.o
- *fill*         0x0011bb2b        0x1 
- .rodata        0x0011bb2c       0x94 binaries/xsh_tee.o
- .rodata        0x0011bbc0      0x1b8 binaries/xsh_udpdump.o
- .rodata        0x0011bd78      0x27d binaries/xsh_udpecho.o
- *fill*         0x0011bff5        0x3 
- .rodata        0x0011bff8      0x12b binaries/xsh_udpserver.o
- *fill*         0x0011c123        0x1 
- .rodata        0x0011c124      0x105 binaries/xsh_uptime.o
-                0x0011c229                        etext = ABSOLUTE (.)
+ .rodata        0x0011a098       0x98 binaries/hello1.o
+ *fill*         0x0011a130       0x10 
+ .rodata        0x0011a140      0x397 binaries/shell.o
+                0x0011a1e0                cmdtab
+ .rodata        0x0011a4d7       0x28 binaries/xsh_argecho.o
+ *fill*         0x0011a4ff        0x1 
+ .rodata        0x0011a500      0x123 binaries/xsh_arp.o
+ *fill*         0x0011a623        0x1 
+ .rodata        0x0011a624       0xc9 binaries/xsh_cat.o
+ .rodata        0x0011a6ed       0x19 binaries/xsh_clear.o
+ *fill*         0x0011a706        0x2 
+ .rodata        0x0011a708      0x1c3 binaries/xsh_date.o
+ .rodata        0x0011a8cb       0x5d binaries/xsh_devdump.o
+ .rodata        0x0011a928        0x9 binaries/xsh_echo.o
+ *fill*         0x0011a931        0x3 
+ .rodata        0x0011a934      0x169 binaries/xsh_help.o
+ *fill*         0x0011aa9d        0x3 
+ .rodata        0x0011aaa0      0x12e binaries/xsh_kill.o
+ *fill*         0x0011abce        0x2 
+ .rodata        0x0011abd0      0x190 binaries/xsh_ls.o
+ .rodata        0x0011ad60      0x266 binaries/xsh_memdump.o
+ *fill*         0x0011afc6        0x2 
+ .rodata        0x0011afc8      0x225 binaries/xsh_memstat.o
+ *fill*         0x0011b1ed        0x3 
+ .rodata        0x0011b1f0      0x1b0 binaries/xsh_netinfo.o
+ .rodata        0x0011b3a0      0x340 binaries/xsh_ns.o
+ .rodata        0x0011b6e0      0x19d binaries/xsh_ping.o
+ *fill*         0x0011b87d        0x3 
+ .rodata        0x0011b880      0x1e0 binaries/xsh_ps.o
+ .rodata        0x0011ba60       0xeb binaries/xsh_sleep.o
+ *fill*         0x0011bb4b        0x1 
+ .rodata        0x0011bb4c       0x94 binaries/xsh_tee.o
+ .rodata        0x0011bbe0      0x1b8 binaries/xsh_udpdump.o
+ .rodata        0x0011bd98      0x27d binaries/xsh_udpecho.o
+ *fill*         0x0011c015        0x3 
+ .rodata        0x0011c018      0x12b binaries/xsh_udpserver.o
+ *fill*         0x0011c143        0x1 
+ .rodata        0x0011c144      0x105 binaries/xsh_uptime.o
+                0x0011c249                        etext = ABSOLUTE (.)
                 0x0011d000                        . = ALIGN (0x1000)
- *fill*         0x0011c229      0xdd7 
+ *fill*         0x0011c249      0xdb7 
 
 .iplt           0x0011d000        0x0
  .iplt          0x0011d000        0x0 binaries/start.o

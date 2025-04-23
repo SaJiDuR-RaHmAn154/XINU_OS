@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"*.embeddedhtml": "html",
-		"shprototypes.h": "c"
+		"shprototypes.h": "c",
+		"xinu.h": "c"
 	}
 }
